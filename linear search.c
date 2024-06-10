@@ -1,33 +1,33 @@
 #include<stdio.h>
 int main()
 {
-    int arr[100],n,key,i,pos=-1;
-    printf("enter the array size: ");
+    int n,pos=-1;
+    printf("enter array size: ");
     scanf("%d",&n);
-    arr[n];
-    printf("enter the elements: ");
-    for(i=0;i<n;i++)
+    int a[n];
+    printf("enter the elements is array: ");
+
+    for(int i=0;i<n;i++)
     {
-        scanf("%d",&arr[i]);
+        scanf("%d",&a[i]);
     }
-     for(i=0;i<n;i++)
+    printf("enter the number you want to search: ");
+    int key,i;
+    scanf("%d",&key);
+    for(int i=0;i<n;i++)
     {
-        printf(" %d\n",arr[i]);
-    }
-    printf("enter the value you wish to search: ");
-    scanf("%d", &key);
-    for(i=0;i<n;i++)
-    {
-       if(key == arr[i])
-       {
-           pos=i+1;
-           break;
-       }
+          if(key==a[i])
+          {
+              pos=i+1;
+              break;
+          }
     }
     if(pos==-1)
-         printf("value not found\n");
+        printf("value not found");
+    else
+        printf("value found at %d",pos);
 
-     else
-        printf("value found at %d\n",pos);
 
+
+return 0;
 }
